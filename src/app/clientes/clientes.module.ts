@@ -1,18 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormularioComponent } from './formulario/formulario.component';
+import { OmbudsmanComponent } from './ombudsman/ombudsman.component';
 
 @NgModule({
   declarations: [
-    FormularioComponent
+    OmbudsmanComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule
   ],
   exports: [
-    FormularioComponent
+    OmbudsmanComponent
   ]
 })
 export class ClientesModule {

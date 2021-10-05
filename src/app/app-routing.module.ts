@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormularioComponent } from './clientes/formulario/formulario.component';
+import { OmbudsmanComponent } from './clientes/ombudsman/ombudsman.component';
 import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
@@ -9,8 +9,8 @@ const routes: Routes = [
     component: MainPageComponent
   },
   {
-    path: 'form',
-    component: FormularioComponent
+    path: 'ombudsman',
+    component: OmbudsmanComponent
   }
 ];
 

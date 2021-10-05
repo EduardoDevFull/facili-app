@@ -3,10 +3,10 @@ import { Cliente } from '../shared/cliente';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.component.html'
+  templateUrl: './ombudsman.component.html',
+  styleUrls: ['ombudsman.component.css']
 })
-export class FormularioComponent implements OnInit {
+export class OmbudsmanComponent implements OnInit {
   formCliente!: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { }
@@ -17,12 +17,11 @@ export class FormularioComponent implements OnInit {
 
   createForm(cliente: Cliente) {
     this.formCliente = this.formBuilder.group({
-      nome: [cliente.nome],
-      tipo: [cliente.tipo],
-      genero: [cliente.genero],
-      dataNascimento: [cliente.dataNascimento],
-      observacao: [cliente.observacao],
-      inativo: [cliente.inativo]
+      name: [cliente.name],
+      email: [cliente.email],
+      type: [cliente.type],
+      cpf: [cliente.cpf],
+      note: [cliente.note],
     })
   }
 

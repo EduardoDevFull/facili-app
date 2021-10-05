@@ -1,0 +1,49 @@
+<header class="fixed-top">
+
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal font">
+      <img src="./assets/img/facili-ico.png" class="img "> Facily</h5>
+
+    <nav>
+      <a class="p-2 text-dark" href="#">E-commerce</a>
+      <a class="p-2 text-dark" href="#">Help</a>
+    </nav>
+  </div>
+
+</header>
+
+<form [formGroup]="formCliente" (ngSubmit)="onSubmit()" style="width: 500px;" class="forms">
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" name="name" id="name" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="type">Type</label>
+    <select class="form-control" name="type" id="type" formControlName="type">
+      <option value="1">Physical person</option>
+      <option value="2">PDR</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="cpf" >CPF</label>
+    <input type="text" class="form-control" name="cpf" id="cpf" formControlName="cpf" placeholder="000.000.000-00">
+  </div>
+
+  <div class="form-group">
+    <label for="note">Note</label>
+    <textarea class="form-control" rows="3" name="note" id="note" formControlName="note"></textarea>
+  </div>
+
+  <input type="submit" class="btn btn-primary mt-4" value="To send">
+  <a href="#" class="btn btn-secondary mt-4 ml-2">Cancel</a>
+
+</form>
