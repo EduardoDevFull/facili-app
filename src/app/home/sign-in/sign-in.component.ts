@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../shared/user';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { User } from 'src/app/clientes/shared/user';
 
 @Component({
-  templateUrl: './ombudsman.component.html',
-  styleUrls: ['ombudsman.component.css']
+  selector: 'sign-up',
+  templateUrl: 'sign-in.component.html',
+  styleUrls: ['sign-in.component.css']
 })
-export class OmbudsmanComponent implements OnInit {
+export class SignInComponent implements OnInit {
   formUser!: FormGroup;
+  nome!: string;
+  senha!: string;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.createForm(new User());
@@ -19,6 +22,7 @@ export class OmbudsmanComponent implements OnInit {
     this.formUser = this.formBuilder.group({
       name: [cliente.name],
       email: [cliente.email],
+      password: [cliente.password],
       type: [cliente.type],
       cpf: [cliente.cpf],
       note: [cliente.note],
@@ -26,7 +30,6 @@ export class OmbudsmanComponent implements OnInit {
   }
 
   onSubmit() {
-    // aqui você pode implementar a logica para fazer seu formulário salvar
     console.log(this.formUser.value);
 
     // Usar o método reset para limpar os controles na tela

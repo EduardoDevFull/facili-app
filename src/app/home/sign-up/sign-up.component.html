@@ -8,6 +8,7 @@
       <a class="p-2 text-dark" href="#">E-commerce</a>
       <a class="p-2 text-dark" href="#">Help</a>
     </nav>
+    <a class="btn btn-outline-primary ml-1" href="signIn">Sign In</a>
   </div>
 
 </header>
@@ -20,31 +21,26 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <label for="email">Email address</label>
+    <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="name@example.com">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
 
   <div class="form-group">
-    <label for="type">Type</label>
-    <select class="form-control" name="type" id="type" formControlName="type">
-      <option value="1">Physical person</option>
-      <option value="2">PDR</option>
-    </select>
+    <label for="password">Password</label>
+    <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password">
+    <small id="passwordHelpBlock" class="form-text text-muted">
+      Your password must be 8-20 characters long, contain letters, and must not numbers contain spaces, special characters, or emoji.
+    </small>
   </div>
 
   <div class="form-group">
-    <label for="cpf" >CPF</label>
-    <input type="text" class="form-control" name="cpf" id="cpf" formControlName="cpf" placeholder="000.000.000-00">
-  </div>
-
-  <div class="form-group ">
-    <label for="note">Note</label>
-    <textarea class="form-control" rows="3" name="note" id="note" formControlName="note"></textarea>
+    <label for="exampleInputPassword1">Confirm your password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
 
   <div>
-    <input type="submit" class="btn btn-primary " value="To send">
+    <a href="#" type="submit" class="btn btn-primary ml-2">To send</a>
     <a href="#" class="btn btn-secondary ml-2">Cancel</a>
   </div>
 </form>
