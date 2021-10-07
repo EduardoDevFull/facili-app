@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,6 +9,7 @@ import { ErrorsModule } from './errors/errors.module';
 import { HomeModule } from './home/home.module';
 import { MainPageModule } from './main-page/main-page.module';
 import { SecondaryPagesModule } from './secondary-pages/secondary-pages.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { SecondaryPagesModule } from './secondary-pages/secondary-pages.module';
     MainPageModule,
     HomeModule,
     SecondaryPagesModule,
-    ErrorsModule
+    FormsModule,
+    ReactiveFormsModule,
+    ErrorsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 export class Order {
   code: number = null as any;
-  request: string = '';
+  name: string = '';
   status: number = 1;
   dataCriacao: Date = null as any;
   description: string = '';

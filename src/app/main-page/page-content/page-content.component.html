@@ -1,12 +1,22 @@
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-  <nav class="navbar navbar-light search ">
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
-  </nav>
 
-  <div class="card ml-3 mt-3" style="width: 500px; height: 250px;">
-    <div class="card-body border border-secondary">
-    </div>
+
+<div [formGroup]="form" class="ml-4">
+  <div style="display: flex;">
+    <input class="form-control mr-sm-2" style="width: 300px;" formControlName="codigo" placeholder="Pesquisar"
+      aria-label="Pesquisar">
+    <button class="btn btn-outline-primary my-2 my-sm-0" (click)="listarPedidos()">Pesquisar</button>
   </div>
+
+  <br />
+
+  <textarea style="width: 300px; height: 300px;" [(ngModel)]="descricao" class="form-control ml-4" rows="3"
+    name="descricao" formControlName="descricao">
+  </textarea>
+</div>
