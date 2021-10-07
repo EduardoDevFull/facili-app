@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../shared/user';
+import { User } from '../../core/user/user';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
-  templateUrl: './ombudsman.component.html',
+  templateUrl: 'ombudsman.component.html',
   styleUrls: ['ombudsman.component.css']
 })
 export class OmbudsmanComponent implements OnInit {

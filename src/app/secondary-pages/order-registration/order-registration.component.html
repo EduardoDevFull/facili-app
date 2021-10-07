@@ -8,7 +8,8 @@
       <a class="p-2 text-dark" href="#">E-commerce</a>
       <a class="p-2 text-dark" href="#">Help</a>
     </nav>
-    <a class="btn btn-outline-primary ml-1" href="signUp">Sign Up</a>
+      <a class="btn btn-outline-primary" href="signUp">Sign Up</a>
+      <a class="btn btn-outline-primary ml-1" href="signIn">Sign In</a>
   </div>
 
 </header>
@@ -16,22 +17,41 @@
 <form [formGroup]="formUser" (ngSubmit)="onSubmit()" style="width: 400px;" class="forms">
 
   <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" name="name" id="name" formControlName="name">
+    <label for="code">Product code</label>
+    <input type="text" class="form-control" name="code" id="code" formControlName="code" placeholder="00000000">
   </div>
 
   <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+    <label for="request">Request</label>
+    <input type="request" formControlName="request" class="form-control" id="request">
   </div>
 
-  <div class="button">
+  <div class="form-group">
+    <label for="status">Status</label>
+    <select class="form-control" name="status" id="status" formControlName="status">
+      <option value="1">Em rota</option>
+      <option value="2">Pronto para retirada</option>
+      <option value="3">Esperando o fornecedor aceitar</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="dataCriacao">Registration date</label>
+    <input type="date" class="form-control" name="dataCriacao" id="dataCriacao" formControlName="dataCriacao">
+  </div>
+
+  <div class="form-group ">
+    <label for="description">Description</label>
+    <textarea class="form-control" rows="3" name="notdescriptione" id="description" formControlName="description"></textarea>
+  </div>
+
+  <div>
     <input type="submit" class="btn btn-primary" value="To send">
     <a href="#" class="btn btn-secondary ml-2">Cancel</a>
   </div>
 </form>
 
-<footer  class="pt-4 my-md-4 pt-md-5 border-top w-100 p-3 footer">
+<footer  class="pt-4 my-md-4 pt-md-5 border-top w-100 p-3">
 
   <div class="row">
       <aside class="col-12 col-md m-5">

@@ -1,29 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Order } from 'src/app/core/order/order';
 import { User } from 'src/app/core/user/user';
 
 @Component({
-  selector: 'sign-up',
-  templateUrl: 'sign-up.component.html',
-  styleUrls: ['sign-up.component.css']
+  selector: 'order-registration',
+  templateUrl: 'order-registration.component.html',
+  styleUrls: ['order-registration.component.css']
 })
-export class SignUpComponent implements OnInit {
+export class OrderRegistrationComponent implements OnInit {
   formUser!: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.createForm(new User());
+    this.createForm(new Order());
   }
 
-  createForm(cliente: User) {
+  createForm(order: Order) {
     this.formUser = this.formBuilder.group({
-      name: [cliente.name],
-      email: [cliente.email],
-      password: [cliente.password],
-      type: [cliente.type],
-      cpf: [cliente.cpf],
-      note: [cliente.note],
+      code: [order.code],
+      request: [order.request],
+      status: [order.status],
+      dataCriacao: [order.dataCriacao],
+      description: [order.description]
     })
   }
 
