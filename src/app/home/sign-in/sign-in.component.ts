@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from 'src/app/clientes/shared/user';
+import { User } from 'src/app/core/user/user';
 
 @Component({
   selector: 'sign-up',

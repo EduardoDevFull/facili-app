@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { OmbudsmanComponent } from './clientes/ombudsman/ombudsman.component';
+import { OmbudsmanComponent } from './secondary-pages/ombudsman/ombudsman.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { SignInComponent } from './home/sign-in/sign-in.component';
 import { SignUpComponent } from './home/sign-up/sign-up.component';

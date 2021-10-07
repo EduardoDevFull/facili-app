@@ -1,0 +1,77 @@
+<header class="fixed-top">
+
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal font">
+      <a href=""><img src="./assets/img/facili-ico.png" class="img "></a> Facily</h5>
+
+    <nav>
+      <a class="p-2 text-dark" href="#">E-commerce</a>
+      <a class="p-2 text-dark" href="#">Help</a>
+    </nav>
+      <a class="btn btn-outline-primary" href="signUp">Sign Up</a>
+      <a class="btn btn-outline-primary ml-1" href="signIn">Sign In</a>
+  </div>
+
+</header>
+
+<form [formGroup]="formUser" (ngSubmit)="onSubmit()" style="width: 400px;" class="forms">
+
+  <div class="form-group">
+    <label for="code">Product code</label>
+    <input type="text" class="form-control" name="code" id="code" formControlName="code" placeholder="00000000">
+  </div>
+
+  <div class="form-group">
+    <label for="request">Request</label>
+    <input type="request" formControlName="request" class="form-control" id="request">
+  </div>
+
+  <div class="form-group">
+    <label for="status">Status</label>
+    <select class="form-control" name="status" id="status" formControlName="status">
+      <option value="1">Em rota</option>
+      <option value="2">Pronto para retirada</option>
+      <option value="3">Esperando o fornecedor aceitar</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="dataCriacao">Registration date</label>
+    <input type="date" class="form-control" name="dataCriacao" id="dataCriacao" formControlName="dataCriacao">
+  </div>
+
+  <div class="form-group ">
+    <label for="description">Description</label>
+    <textarea class="form-control" rows="3" name="notdescriptione" id="description" formControlName="description"></textarea>
+  </div>
+
+  <div>
+    <input type="submit" class="btn btn-primary" value="To send">
+    <a href="#" class="btn btn-secondary ml-2">Cancel</a>
+  </div>
+</form>
+
+<footer  class="pt-4 my-md-4 pt-md-5 border-top w-100 p-3">
+
+  <div class="row">
+      <aside class="col-12 col-md m-5">
+        <small class="d-block mb-3 text-muted">© 2021-2021</small>
+        <small class="d-block mb-3 ">0800-023-0566</small>
+      </aside>
+    <aside class="col-6 col-md">
+      <h5 class="text-primary">Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="p-2 text-dark" href="#">Customer resources</a></li>
+        <li><a class="p-2 text-dark" href="#">Contracts and Regulations</a></li>
+      </ul>
+    </aside>
+    <aside class="col-6 col-md">
+      <h5 class="text-primary">Facily</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="p-2 text-dark" href="#">Advice to Users</a></li>
+        <li><a class="p-2 text-dark" href="#">Consumer Protection Code</a></li>
+      </ul>
+    </aside>
+  </div>
+
+</footer>
