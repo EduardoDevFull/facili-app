@@ -8,7 +8,6 @@ import { PageContentService } from 'src/app/service/page-content.service';
   styleUrls: ['page-content.component.css']
 })
 export class PageContentComponent {
-
   form: FormGroup;
 
   descricao: any;
@@ -25,7 +24,7 @@ export class PageContentComponent {
 
   listarPedidos() {
     this.pageContentService.findAll().subscribe(resposta => {
-      this.descricao = resposta[0].status;
+      this.descricao = resposta[0].codigo;
       console.log(resposta);
     });
   }
