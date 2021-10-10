@@ -4,7 +4,6 @@ import { Order } from 'src/app/core/order/order';
 import { User } from 'src/app/core/user/user';
 
 @Component({
-  selector: 'order-registration',
   templateUrl: 'order-registration.component.html',
   styleUrls: ['order-registration.component.css']
 })
