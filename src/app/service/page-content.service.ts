@@ -15,4 +15,8 @@ export class PageContentService {
   findAll():Observable<any> {
     return this.httpClient.get(this.apiUrl.concat("v1/pedidos"));
   }
+
+  filtroPorCodigo(codigo: any): Observable<any> {
+    return this.httpClient.get(this.apiUrl.concat("v1/pedidos/filtro"), codigo);
+  }
 }

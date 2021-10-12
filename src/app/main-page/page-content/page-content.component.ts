@@ -9,7 +9,7 @@ import { PageContentService } from 'src/app/service/page-content.service';
 })
 export class PageContentComponent {
   form: FormGroup;
-  descricao: any;
+  descricao: any = '';
 
   constructor(private pageContentService: PageContentService,
     private fb: FormBuilder) {
@@ -20,10 +20,16 @@ export class PageContentComponent {
       });
     }
 
+
+    // CRIAR METODO PARA CHAMAR FILTRO POR CODIGO
+    // DICA:: o metodo esta dentro de pageContentService
+
     listarPedidos() {
       this.pageContentService.findAll().subscribe(resposta => {
-        this.descricao = resposta[0].codigo;
         console.log(resposta);
+        resposta.forEach((element: any) => {
+          this.descricao = this.descricao.concat(element.codigo, ', ');
+        });
       });
     }
   }

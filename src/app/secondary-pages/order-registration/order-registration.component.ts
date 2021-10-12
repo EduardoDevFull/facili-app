@@ -1,6 +1,7 @@
+import { OrderRegistrationService } from './../../service/order-registration.service';
+import { PedidoRequest } from './../../core/pedido-request/pedido-request';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Order } from 'src/app/core/order/order';
 import { User } from 'src/app/core/user/user';
 
 @Component({
@@ -8,11 +9,11 @@ import { User } from 'src/app/core/user/user';
   styleUrls: ['order-registration.component.css']
 })
 export class OrderRegistrationComponent implements OnInit {
+
   formUser!: FormGroup;
-  order: Order = new Order();
+  pedidoRequest: PedidoRequest = new PedidoRequest();
 
-  constructor(private formBuilder: FormBuilder) { }
-
+  constructor(private formBuilder: FormBuilder, private pedidoService: OrderRegistrationService) { }
 
 
   ngOnInit() {
@@ -21,17 +22,24 @@ export class OrderRegistrationComponent implements OnInit {
 
   createForm() {
     this.formUser = this.formBuilder.group({
-      code: [this.order.code],
-      name: [this.order.name],
-      status: [this.order.status],
-      dataCriacao: [this.order.dataCriacao],
-      description: [this.order.description]
+      codigo: [this.pedidoRequest.codigo],
+      produto: [this.pedidoRequest.produto],
+      status: [this.pedidoRequest.status],
+      data_criacao: [this.pedidoRequest.data_criacao],
+      notas: [this.pedidoRequest.notas],
     })
   }
 
   onSubmit() {
-    this.order = this.formUser.value;
-    console.log(this.order);
+    this.pedidoRequest = this.formUser.value;
+    this.pedidoRequest.data_criacao = null;
+
+    this.pedidoService.create(this.pedidoRequest).subscribe(resposta => {
+      window.alert("Criado com sucesso!");
+    });
+
+
+    console.log(this.pedidoRequest);
 
     // Usar o método reset para limpar os controles na tela
     this.formUser.reset(new User());
