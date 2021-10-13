@@ -24,6 +24,8 @@ export class PageContentComponent {
     // CRIAR METODO PARA CHAMAR FILTRO POR CODIGO
     // DICA:: o metodo esta dentro de pageContentService
 
+    
+
     listarPedidos() {
       this.pageContentService.findAll().subscribe(resposta => {
         console.log(resposta);
